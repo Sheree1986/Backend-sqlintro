@@ -1,6 +1,8 @@
 (1) Using the Customer Table, select the CustomerName, ContactName, and Country.  Use ORDER BY to order by Country.  
 Use LIMIT and OFFSET to get entries 11 through 20. Paste your SQL statement below. 
 
+SELECT CustomerName, ContactName, Country FROM Customers ORDER BY Country LIMIT 10 OFFSET 10;
+
 (2) Select all columns from the Customer table where the ContactName starts with A.  Paste your SQL statement below.
 
 SELECT * FROM Customers WHERE ContactName LIKE "a%"
@@ -26,4 +28,8 @@ VALUES ("Fresh Pears", 3, 7, "25 bags", 25);
 
 (5) Update the two top rows of the Products Table to increase the price by 1.50. (Get SQL to do the addition for you.)  Paste your SQL statement below.
 
+UPDATE Products SET Price = Price + 1.50 WHERE ProductID <= 2;
+
 (6) Delete all rows of the Products Table where the price is less than 7.00. Paste your SQL statement below.
+
+DELETE FROM products WHERE price < 7.00;
